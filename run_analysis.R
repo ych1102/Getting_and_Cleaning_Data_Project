@@ -45,11 +45,8 @@ names(mergedData) <- gsub("\\(\\)","",names(mergedData))
 mergedData$y <- as.factor(mergedData$y)
 mergedData$subject <- as.factor(mergedData$subject)
 library(reshape2)
-Xmelt <- melt(mergedData, id=c("y","subject"), measure.vars=c(1:(dim(mergedData)[2]-2)))
-cylData <- dcast(Xmelt,y~variable,mean)
-cylData2 <- dcast(Xmelt,subject~variable,mean)
+
 tidyData <- aggregate(mergedData[,c(1:(dim(mergedData)[2]-2))],by = list(mergedData$y,mergedData$subject),FUN = "mean")
-names(tidyData)[c(1,2)] <- c("activity","subject")
+names(tidyData)[c(1,2)] <- c("Activity","Subject")
 
 write.table(tidyData,file = "tidy_data.txt")
-
