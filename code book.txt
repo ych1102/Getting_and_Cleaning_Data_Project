@@ -1,0 +1,14 @@
+DATA DICTIONARY - Human Activity Recognition Using Smartphones (Tidy Data)
+Activity: 6 types of activity
+	LAYING SITTING STANDING WALKING WALKING_DOWNSTAIRS WALKING_UPSTAIRS
+Subject: 30 subjects: 1…30
+In the following names:
+'-XYZ' is used to denote 3-axial signals in the X, Y and Z directions.
+‘mean’ denotes this is a mean
+‘std’ denotes standard deviation
+‘t’ denotes time
+‘f’ denotes frequency domain signals
+‘BodyAcc’ denotes body linear acceleration
+‘GravityAcc’ denotes gravity acceleration
+‘BodyGyro’ denotes  angular velocity
+
